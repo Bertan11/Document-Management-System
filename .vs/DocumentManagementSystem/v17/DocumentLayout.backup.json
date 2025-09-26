@@ -1,0 +1,416 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\berta\\Desktop\\Document-Management-System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\documentmanagementsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\documentmanagementsystem.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\migrations\\documentdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:migrations\\documentdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\migrations\\20250916085513_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:migrations\\20250916085513_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:services\\documentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\documentservicetests.cs\\documentservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:documentservicetests.cs\\documentservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\data\\documentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:data\\documentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\repositories\\documentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:repositories\\documentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\services\\idocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:services\\idocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\repositories\\idocumentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:repositories\\idocumentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 755,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 442,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\wwwroot\\js\\app.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\app.js",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\wwwroot\\js\\app.js",
+              "RelativeToolTip": "wwwroot\\js\\app.js",
+              "ViewState": "AgIAAEkBAAAAAAAAAAAUwFcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-25T21:03:04.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-09-25T21:02:47.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\wwwroot\\css\\styles.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\styles.css",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\wwwroot\\css\\styles.css",
+              "RelativeToolTip": "wwwroot\\css\\styles.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-25T21:01:53.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-09-24T10:27:05.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-23T13:40:13.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-22T09:51:23.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-17T09:42:48.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DocumentManagementSystem.csproj",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\DocumentManagementSystem.csproj",
+              "RelativeDocumentMoniker": "DocumentManagementSystem.csproj",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\DocumentManagementSystem.csproj",
+              "RelativeToolTip": "DocumentManagementSystem.csproj",
+              "ViewState": "AgIAABMAAAAAAAAAAAAswCMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-16T13:10:28.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-23T13:27:59.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-23T14:29:44.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwDUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T17:27:57.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DocumentManagementSystem",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\DocumentManagementSystem.csproj",
+              "RelativeDocumentMoniker": "DocumentManagementSystem.csproj",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\DocumentManagementSystem.csproj",
+              "RelativeToolTip": "DocumentManagementSystem.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-23T13:40:10.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DocumentServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\DocumentServiceTests.cs\\DocumentServiceTests.cs",
+              "RelativeDocumentMoniker": "DocumentServiceTests.cs\\DocumentServiceTests.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\DocumentServiceTests.cs\\DocumentServiceTests.cs",
+              "RelativeToolTip": "DocumentServiceTests.cs\\DocumentServiceTests.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T13:52:14.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DocumentService.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Services\\DocumentService.cs",
+              "RelativeDocumentMoniker": "Services\\DocumentService.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Services\\DocumentService.cs",
+              "RelativeToolTip": "Services\\DocumentService.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAwwFwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T18:23:23.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20250916085513_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Migrations\\20250916085513_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250916085513_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Migrations\\20250916085513_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20250916085513_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T13:11:15.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DocumentDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Migrations\\DocumentDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\DocumentDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Migrations\\DocumentDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\DocumentDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T13:11:18.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Document.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Models\\Document.cs",
+              "RelativeDocumentMoniker": "Models\\Document.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Models\\Document.cs",
+              "RelativeToolTip": "Models\\Document.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T13:11:08.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DocumentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Repositories\\DocumentRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\DocumentRepository.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Repositories\\DocumentRepository.cs",
+              "RelativeToolTip": "Repositories\\DocumentRepository.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowBcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T09:26:41.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DocumentController.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Controllers\\DocumentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DocumentController.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Controllers\\DocumentController.cs",
+              "RelativeToolTip": "Controllers\\DocumentController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T13:11:29.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DocumentDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Data\\DocumentDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\DocumentDbContext.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Data\\DocumentDbContext.cs",
+              "RelativeToolTip": "Data\\DocumentDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T09:23:27.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IDocumentService.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Services\\IDocumentService.cs",
+              "RelativeDocumentMoniker": "Services\\IDocumentService.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Services\\IDocumentService.cs",
+              "RelativeToolTip": "Services\\IDocumentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T09:46:53.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IDocumentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Repositories\\IDocumentRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IDocumentRepository.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Repositories\\IDocumentRepository.cs",
+              "RelativeToolTip": "Repositories\\IDocumentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T09:46:48.06Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 590,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
