@@ -1,0 +1,281 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\berta\\Desktop\\Document-Management-System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\nginx\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:nginx\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\ngnix\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:ngnix\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\nginx\\js\\app.js||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:nginx\\js\\app.js||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\nginx\\css\\styles.css||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:nginx\\css\\styles.css||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\ngnix\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:ngnix\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\ngnix\\nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:ngnix\\nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\ngnix\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:ngnix\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\data\\documentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:data\\documentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\ngnix\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:ngnix\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|c:\\users\\berta\\desktop\\document-management-system\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0CB7D418-1523-4741-A705-7A845C6B441F}|DocumentManagementSystem.csproj|solutionrelative:controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 1171,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\nginx\\js\\app.js",
+              "RelativeDocumentMoniker": "nginx\\js\\app.js",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\nginx\\js\\app.js",
+              "RelativeToolTip": "nginx\\js\\app.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-01T10:08:45.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\nginx\\css\\styles.css",
+              "RelativeDocumentMoniker": "nginx\\css\\styles.css",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\nginx\\css\\styles.css",
+              "RelativeToolTip": "nginx\\css\\styles.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-01T10:06:00.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\nginx\\index.html",
+              "RelativeDocumentMoniker": "nginx\\index.html",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\nginx\\index.html",
+              "RelativeToolTip": "nginx\\index.html",
+              "ViewState": "AgIAACcAAAAAAAAAAAAuwEYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-01T10:00:40.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "nginx.conf",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\ngnix\\nginx.conf",
+              "RelativeDocumentMoniker": "ngnix\\nginx.conf",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\ngnix\\nginx.conf",
+              "RelativeToolTip": "ngnix\\nginx.conf",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-01T09:43:40.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\ngnix\\Dockerfile",
+              "RelativeDocumentMoniker": "ngnix\\Dockerfile",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\ngnix\\Dockerfile",
+              "RelativeToolTip": "ngnix\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-01T09:43:00.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Document.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Models\\Document.cs",
+              "RelativeDocumentMoniker": "Models\\Document.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Models\\Document.cs",
+              "RelativeToolTip": "Models\\Document.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T10:05:32.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DocumentDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Data\\DocumentDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\DocumentDbContext.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Data\\DocumentDbContext.cs",
+              "RelativeToolTip": "Data\\DocumentDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T10:05:20.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\ngnix\\css\\styles.css",
+              "RelativeDocumentMoniker": "ngnix\\css\\styles.css",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\ngnix\\css\\styles.css",
+              "RelativeToolTip": "ngnix\\css\\styles.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-29T09:51:29.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DocumentController.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Controllers\\DocumentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DocumentController.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Controllers\\DocumentController.cs",
+              "RelativeToolTip": "Controllers\\DocumentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T08:18:42.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-09-29T08:16:54.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-29T08:16:51.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\ngnix\\js\\app.js",
+              "RelativeDocumentMoniker": "ngnix\\js\\app.js",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\ngnix\\js\\app.js",
+              "RelativeToolTip": "ngnix\\js\\app.js",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAE8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-29T08:02:47.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAswDMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T08:03:31.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\berta\\Desktop\\Document-Management-System\\ngnix\\index.html",
+              "RelativeDocumentMoniker": "ngnix\\index.html",
+              "ToolTip": "C:\\Users\\berta\\Desktop\\Document-Management-System\\ngnix\\index.html",
+              "RelativeToolTip": "ngnix\\index.html",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwDgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-09-29T08:02:46.886Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 285,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 590,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
