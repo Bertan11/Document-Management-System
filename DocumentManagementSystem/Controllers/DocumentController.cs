@@ -23,6 +23,7 @@ namespace DocumentManagementSystem.Controllers
             _logger = logger;
         }
 
+        // GET: api/document
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -30,6 +31,7 @@ namespace DocumentManagementSystem.Controllers
             return Ok(documents);
         }
 
+        // GET: api/document/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
@@ -41,12 +43,13 @@ namespace DocumentManagementSystem.Controllers
             return Ok(document);
         }
 
+        // POST: api/document
         [HttpPost]
         public async Task<IActionResult> Create(Document document)
         {
             var created = await _service.AddAsync(document);
 
-            // Nachricht an RabbitMQ senden
+            // Nachricht an RabbitMQ
             var message = $"Document uploaded: {created.Id}, Title: {created.Title}";
             _rabbitMqService.SendMessage(message);
 
@@ -55,6 +58,7 @@ namespace DocumentManagementSystem.Controllers
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
+        // PUT: api/document/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, Document document)
         {
@@ -72,25 +76,23 @@ namespace DocumentManagementSystem.Controllers
             _logger.LogInformation("Dokument {DocId} wurde aktualisiert.", id);
             return Ok(updated);
         }
+
+        // POST: api/document/upload
+        /// <summary>
+        /// Lädt eine Datei hoch (z. B. PDF oder Bild).
+        /// </summary>
+        /// <param name="file">Die Datei, die hochgeladen wird</param>
+        /// <param name="title">Ein optionaler Titel</param>
         [HttpPost("upload")]
-        [Consumes("multipart/form-data")]
-        public async Task<IActionResult> Upload([FromForm] IFormFile file, [FromForm] string title)
+        public async Task<IActionResult> Upload([FromBody] Document document)
         {
-            if (file == null || file.Length == 0)
+            if (document == null || string.IsNullOrEmpty(document.Content))
             {
-                throw new DocumentValidationException("Keine Datei hochgeladen.");
+                throw new DocumentValidationException("Ungültige Datei oder leerer Inhalt.");
             }
 
-            using var ms = new MemoryStream();
-            await file.CopyToAsync(ms);
-
-            var document = new Document
-            {
-                Id = Guid.NewGuid(),
-                Title = title,
-                Content = Convert.ToBase64String(ms.ToArray()),
-                CreatedAt = DateTime.UtcNow
-            };
+            document.Id = Guid.NewGuid();
+            document.CreatedAt = DateTime.UtcNow;
 
             await _service.AddAsync(document);
 
@@ -100,6 +102,7 @@ namespace DocumentManagementSystem.Controllers
         }
 
 
+        // DELETE: api/document/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {

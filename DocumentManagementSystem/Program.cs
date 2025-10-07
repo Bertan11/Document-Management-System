@@ -33,10 +33,8 @@ builder.Services.AddCors(options =>
 // 🔹 Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.OperationFilter<DocumentManagementSystem.Swagger.FileUploadOperationFilter>();
-});
+builder.Services.AddSwaggerGen();
+
 
 var app = builder.Build();
 
