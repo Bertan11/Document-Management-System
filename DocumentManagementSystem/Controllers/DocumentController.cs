@@ -73,12 +73,14 @@ namespace DocumentManagementSystem.Controllers
             return Ok(updated);
         }
         [HttpPost("upload")]
+        [Consumes("multipart/form-data")]
         public async Task<IActionResult> Upload([FromForm] IFormFile file, [FromForm] string title)
         {
             if (file == null || file.Length == 0)
+            {
                 throw new DocumentValidationException("Keine Datei hochgeladen.");
+            }
 
-            // Datei in Bytes konvertieren
             using var ms = new MemoryStream();
             await file.CopyToAsync(ms);
 
@@ -86,17 +88,17 @@ namespace DocumentManagementSystem.Controllers
             {
                 Id = Guid.NewGuid(),
                 Title = title,
-                Content = Convert.ToBase64String(ms.ToArray()) // oder direkt speichern
+                Content = Convert.ToBase64String(ms.ToArray()),
+                CreatedAt = DateTime.UtcNow
             };
 
-            var created = await _service.AddAsync(document);
+            await _service.AddAsync(document);
 
-            // Nachricht an RabbitMQ senden
-            var message = $"Document uploaded: {created.Id}, Title: {created.Title}";
-            _rabbitMqService.SendMessage(message);
+            _rabbitMqService.SendMessage($"Neue Datei hochgeladen: {document.Title} ({document.Id})");
 
-            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+            return Ok(document);
         }
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
