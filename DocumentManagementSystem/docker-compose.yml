@@ -22,13 +22,13 @@
     depends_on:
       postgres:
         condition: service_healthy
-      rabbitmq:         # 🚀 NEU: API wartet auch auf RabbitMQ
+      rabbitmq:
         condition: service_healthy
     environment:
       ASPNETCORE_URLS: http://+:8081
       ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=DocumentManagement;Username=postgres;Password=postgres"
 
-      # 👉 RabbitMQ Settings
+      # RabbitMQ Settings
       RabbitMq__Host: rabbitmq
       RabbitMq__User: guest
       RabbitMq__Password: guest
@@ -44,12 +44,12 @@
     depends_on:
       - api
 
-  rabbitmq:  # 🚀 NEU: RabbitMQ Service mit Management-UI
+  rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
     ports:
-      - "5672:5672"    # AMQP für API/Worker
-      - "15672:15672"  # Management UI
+      - "5672:5672"
+      - "15672:15672"
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
@@ -61,6 +61,19 @@
     volumes:
       - rabbitmqdata:/var/lib/rabbitmq
 
+  ocrworker:   # 🚀 NEU: Worker-Service
+    build:
+      context: ../OcrWorker   # Ordner wo dein Worker liegt
+      dockerfile: Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      RabbitMq__Host: rabbitmq
+      RabbitMq__User: guest
+      RabbitMq__Password: guest
+    restart: always   # Worker läuft immer mit
+
 volumes:
   dbdata:
-  rabbitmqdata:   # 🚀 NEU: persistent RabbitMQ Daten
+  rabbitmqdata:

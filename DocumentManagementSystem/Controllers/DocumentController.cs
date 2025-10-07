@@ -3,6 +3,7 @@ using System;
 using System.Threading.Tasks;
 using DocumentManagementSystem.Models;
 using DocumentManagementSystem.Services;
+using Microsoft.Extensions.Logging;
 
 namespace DocumentManagementSystem.Controllers
 {
@@ -11,13 +12,16 @@ namespace DocumentManagementSystem.Controllers
     public class DocumentController : ControllerBase
     {
         private readonly IDocumentService _service;
+        private readonly RabbitMqService _rabbitMqService;
+        private readonly ILogger<DocumentController> _logger;
 
-        public DocumentController(IDocumentService service)
+        public DocumentController(IDocumentService service, RabbitMqService rabbitMqService, ILogger<DocumentController> logger)
         {
             _service = service;
+            _rabbitMqService = rabbitMqService;
+            _logger = logger;
         }
 
-        // GET: api/document
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -25,53 +29,66 @@ namespace DocumentManagementSystem.Controllers
             return Ok(documents);
         }
 
-        // GET: api/document/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
             var document = await _service.GetByIdAsync(id);
             if (document == null)
+            {
+                _logger.LogWarning("Dokument mit ID {Id} nicht gefunden", id);
                 return NotFound();
-
+            }
             return Ok(document);
         }
 
-        // POST: api/document
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Document document)
+        public async Task<IActionResult> Create(Document document)
         {
-            // Id und CreatedAt automatisch setzen
-            document.Id = Guid.NewGuid();
-            document.CreatedAt = DateTime.UtcNow;
+            try
+            {
+                var created = await _service.AddAsync(document);
 
-            var created = await _service.AddAsync(document);
-            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+                // Nachricht an RabbitMQ senden
+                var message = $"Document uploaded: {created.Id}, Title: {created.Title}";
+                _rabbitMqService.SendMessage(message);
+
+                _logger.LogInformation("Dokument {DocId} erstellt und Nachricht an RabbitMQ gesendet.", created.Id);
+
+                return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Fehler beim Erstellen des Dokuments");
+                return StatusCode(500, "Fehler beim Erstellen des Dokuments");
+            }
         }
 
-        // PUT: api/document/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] Document document)
+        public async Task<IActionResult> Update(Guid id, Document document)
         {
-            var existing = await _service.GetByIdAsync(id);
-            if (existing == null)
-                return NotFound();
+            if (id != document.Id)
+            {
+                _logger.LogWarning("Update fehlgeschlagen: ID {Id} stimmt nicht mit Dokument überein", id);
+                return BadRequest();
+            }
 
-            // Nur veränderbare Felder aktualisieren
-            existing.Title = document.Title;
-            existing.Content = document.Content;
+            var updated = await _service.UpdateAsync(document);
+            _logger.LogInformation("Dokument {DocId} wurde aktualisiert.", id);
 
-            var updated = await _service.UpdateAsync(existing);
             return Ok(updated);
         }
 
-        // DELETE: api/document/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var result = await _service.DeleteAsync(id);
             if (!result)
+            {
+                _logger.LogWarning("Löschen fehlgeschlagen: Dokument {Id} nicht gefunden.", id);
                 return NotFound();
+            }
 
+            _logger.LogInformation("Dokument {Id} gelöscht.", id);
             return NoContent();
         }
     }

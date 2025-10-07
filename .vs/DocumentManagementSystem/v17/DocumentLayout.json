@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\migrations\\20251007150550_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\migrations\\20251007150550_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\data\\documentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\data\\documentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\exceptions\\documentvalidationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\exceptions\\documentvalidationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\exceptions\\documentnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\exceptions\\documentnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\services\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\services\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,24 +43,12 @@
       "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\frontend\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\frontend\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\frontend\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\data\\documentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\data\\documentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,14 +75,6 @@
       "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\repositories\\documentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\exceptions\\documentvalidationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\exceptions\\documentvalidationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\exceptions\\documentnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\exceptions\\documentnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|c:\\users\\alono\\desktop\\documentmanagementsystem\\documentmanagementsystem\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{114C901B-81E1-4868-890E-D457D86E1B09}|DocumentManagementSystem\\DocumentManagementSystem.csproj|solutionrelative:documentmanagementsystem\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -86,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 813,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,55 +98,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "nginx.conf",
-              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\frontend\\nginx.conf",
-              "RelativeDocumentMoniker": "DocumentManagementSystem\\frontend\\nginx.conf",
-              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\frontend\\nginx.conf",
-              "RelativeToolTip": "DocumentManagementSystem\\frontend\\nginx.conf",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-07T15:39:13.207Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\frontend\\Dockerfile",
-              "RelativeDocumentMoniker": "DocumentManagementSystem\\frontend\\Dockerfile",
-              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\frontend\\Dockerfile",
-              "RelativeToolTip": "DocumentManagementSystem\\frontend\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-07T15:29:25.927Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DocumentDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Data\\DocumentDbContext.cs",
-              "RelativeDocumentMoniker": "DocumentManagementSystem\\Data\\DocumentDbContext.cs",
-              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Data\\DocumentDbContext.cs",
-              "RelativeToolTip": "DocumentManagementSystem\\Data\\DocumentDbContext.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA2wCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T16:41:04.969Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "DocumentController.cs",
               "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Controllers\\DocumentController.cs",
               "RelativeDocumentMoniker": "DocumentManagementSystem\\Controllers\\DocumentController.cs",
               "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Controllers\\DocumentController.cs",
               "RelativeToolTip": "DocumentManagementSystem\\Controllers\\DocumentController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAuwE4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAswF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T16:44:53.521Z"
+              "WhenOpened": "2025-10-06T16:44:53.521Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "RabbitMqService.cs",
               "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Services\\RabbitMqService.cs",
               "RelativeDocumentMoniker": "DocumentManagementSystem\\Services\\RabbitMqService.cs",
@@ -155,31 +124,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IDocumentService.cs",
-              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Services\\IDocumentService.cs",
-              "RelativeDocumentMoniker": "DocumentManagementSystem\\Services\\IDocumentService.cs",
-              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Services\\IDocumentService.cs",
-              "RelativeToolTip": "DocumentManagementSystem\\Services\\IDocumentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Program.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T16:42:56.361Z"
+              "WhenOpened": "2025-10-06T16:45:12.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DocumentNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Exceptions\\DocumentNotFoundException.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Exceptions\\DocumentNotFoundException.cs",
+              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Exceptions\\DocumentNotFoundException.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Exceptions\\DocumentNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T17:03:41.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DocumentValidationException.cs",
+              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Exceptions\\DocumentValidationException.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Exceptions\\DocumentValidationException.cs",
+              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Exceptions\\DocumentValidationException.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Exceptions\\DocumentValidationException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T17:04:09.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20251007150550_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Migrations\\20251007150550_InitialCreate.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Migrations\\20251007150550_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Migrations\\20251007150550_InitialCreate.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Migrations\\20251007150550_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T17:37:45.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DocumentDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Data\\DocumentDbContext.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Data\\DocumentDbContext.cs",
+              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Data\\DocumentDbContext.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Data\\DocumentDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAUwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T16:41:04.969Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\appsettings.json",
-              "RelativeDocumentMoniker": "DocumentManagementSystem\\appsettings.json",
-              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\appsettings.json",
-              "RelativeToolTip": "DocumentManagementSystem\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-06T16:52:43.833Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "App.js",
               "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\frontend\\src\\App.js",
               "RelativeDocumentMoniker": "DocumentManagementSystem\\frontend\\src\\App.js",
@@ -191,7 +201,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\appsettings.json",
+              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\appsettings.json",
+              "RelativeToolTip": "DocumentManagementSystem\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-06T16:52:43.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IDocumentService.cs",
+              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Services\\IDocumentService.cs",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\Services\\IDocumentService.cs",
+              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Services\\IDocumentService.cs",
+              "RelativeToolTip": "DocumentManagementSystem\\Services\\IDocumentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T16:42:56.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\frontend\\Dockerfile",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\frontend\\Dockerfile",
+              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\frontend\\Dockerfile",
+              "RelativeToolTip": "DocumentManagementSystem\\frontend\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-07T15:29:25.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "nginx.conf",
+              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\frontend\\nginx.conf",
+              "RelativeDocumentMoniker": "DocumentManagementSystem\\frontend\\nginx.conf",
+              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\frontend\\nginx.conf",
+              "RelativeToolTip": "DocumentManagementSystem\\frontend\\nginx.conf",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-07T15:39:13.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\docker-compose.yml",
               "RelativeDocumentMoniker": "DocumentManagementSystem\\docker-compose.yml",
@@ -203,19 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Program.cs",
-              "RelativeDocumentMoniker": "DocumentManagementSystem\\Program.cs",
-              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Program.cs",
-              "RelativeToolTip": "DocumentManagementSystem\\Program.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAuwDkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T16:45:12.076Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Document.cs",
               "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Models\\Document.cs",
               "RelativeDocumentMoniker": "DocumentManagementSystem\\Models\\Document.cs",
@@ -227,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Dockerfile",
               "RelativeDocumentMoniker": "DocumentManagementSystem\\Dockerfile",
@@ -239,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "DocumentService.cs",
               "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Services\\DocumentService.cs",
               "RelativeDocumentMoniker": "DocumentManagementSystem\\Services\\DocumentService.cs",
@@ -251,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "IDocumentRepository.cs",
               "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Repositories\\IDocumentRepository.cs",
               "RelativeDocumentMoniker": "DocumentManagementSystem\\Repositories\\IDocumentRepository.cs",
@@ -263,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "DocumentRepository.cs",
               "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Repositories\\DocumentRepository.cs",
               "RelativeDocumentMoniker": "DocumentManagementSystem\\Repositories\\DocumentRepository.cs",
@@ -275,31 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DocumentValidationException.cs",
-              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Exceptions\\DocumentValidationException.cs",
-              "RelativeDocumentMoniker": "DocumentManagementSystem\\Exceptions\\DocumentValidationException.cs",
-              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Exceptions\\DocumentValidationException.cs",
-              "RelativeToolTip": "DocumentManagementSystem\\Exceptions\\DocumentValidationException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T17:04:09.872Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DocumentNotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Exceptions\\DocumentNotFoundException.cs",
-              "RelativeDocumentMoniker": "DocumentManagementSystem\\Exceptions\\DocumentNotFoundException.cs",
-              "ToolTip": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\Exceptions\\DocumentNotFoundException.cs",
-              "RelativeToolTip": "DocumentManagementSystem\\Exceptions\\DocumentNotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T17:03:41.337Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\appsettings.Development.json",
               "RelativeDocumentMoniker": "DocumentManagementSystem\\appsettings.Development.json",
@@ -311,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "DocumentManagementSystem.csproj",
               "DocumentMoniker": "C:\\Users\\alono\\Desktop\\DocumentManagementSystem\\DocumentManagementSystem\\DocumentManagementSystem.csproj",
               "RelativeDocumentMoniker": "DocumentManagementSystem\\DocumentManagementSystem.csproj",
