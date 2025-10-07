@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using DocumentManagementSystem.Models;
 using DocumentManagementSystem.Services;
 using Microsoft.Extensions.Logging;
+using DocumentManagementSystem.Exceptions;
 
 namespace DocumentManagementSystem.Controllers
 {
@@ -35,8 +36,7 @@ namespace DocumentManagementSystem.Controllers
             var document = await _service.GetByIdAsync(id);
             if (document == null)
             {
-                _logger.LogWarning("Dokument mit ID {Id} nicht gefunden", id);
-                return NotFound();
+                throw new DocumentNotFoundException($"Dokument mit ID {id} nicht gefunden");
             }
             return Ok(document);
         }
@@ -44,23 +44,15 @@ namespace DocumentManagementSystem.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Document document)
         {
-            try
-            {
-                var created = await _service.AddAsync(document);
+            var created = await _service.AddAsync(document);
 
-                // Nachricht an RabbitMQ senden
-                var message = $"Document uploaded: {created.Id}, Title: {created.Title}";
-                _rabbitMqService.SendMessage(message);
+            // Nachricht an RabbitMQ senden
+            var message = $"Document uploaded: {created.Id}, Title: {created.Title}";
+            _rabbitMqService.SendMessage(message);
 
-                _logger.LogInformation("Dokument {DocId} erstellt und Nachricht an RabbitMQ gesendet.", created.Id);
+            _logger.LogInformation("Dokument {DocId} erstellt und Nachricht an RabbitMQ gesendet.", created.Id);
 
-                return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Fehler beim Erstellen des Dokuments");
-                return StatusCode(500, "Fehler beim Erstellen des Dokuments");
-            }
+            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
         [HttpPut("{id}")]
@@ -68,14 +60,42 @@ namespace DocumentManagementSystem.Controllers
         {
             if (id != document.Id)
             {
-                _logger.LogWarning("Update fehlgeschlagen: ID {Id} stimmt nicht mit Dokument überein", id);
-                return BadRequest();
+                throw new DocumentValidationException("Update fehlgeschlagen: ID stimmt nicht mit Dokument überein");
             }
 
             var updated = await _service.UpdateAsync(document);
-            _logger.LogInformation("Dokument {DocId} wurde aktualisiert.", id);
+            if (updated == null)
+            {
+                throw new DocumentNotFoundException($"Dokument mit ID {id} nicht gefunden");
+            }
 
+            _logger.LogInformation("Dokument {DocId} wurde aktualisiert.", id);
             return Ok(updated);
+        }
+        [HttpPost("upload")]
+        public async Task<IActionResult> Upload([FromForm] IFormFile file, [FromForm] string title)
+        {
+            if (file == null || file.Length == 0)
+                throw new DocumentValidationException("Keine Datei hochgeladen.");
+
+            // Datei in Bytes konvertieren
+            using var ms = new MemoryStream();
+            await file.CopyToAsync(ms);
+
+            var document = new Document
+            {
+                Id = Guid.NewGuid(),
+                Title = title,
+                Content = Convert.ToBase64String(ms.ToArray()) // oder direkt speichern
+            };
+
+            var created = await _service.AddAsync(document);
+
+            // Nachricht an RabbitMQ senden
+            var message = $"Document uploaded: {created.Id}, Title: {created.Title}";
+            _rabbitMqService.SendMessage(message);
+
+            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
         [HttpDelete("{id}")]
@@ -84,8 +104,7 @@ namespace DocumentManagementSystem.Controllers
             var result = await _service.DeleteAsync(id);
             if (!result)
             {
-                _logger.LogWarning("Löschen fehlgeschlagen: Dokument {Id} nicht gefunden.", id);
-                return NotFound();
+                throw new DocumentNotFoundException($"Dokument mit ID {id} nicht gefunden");
             }
 
             _logger.LogInformation("Dokument {Id} gelöscht.", id);
