@@ -1,23 +1,28 @@
 ﻿import React, { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
     const [documents, setDocuments] = useState([]);
 
-    // 👉 States für Text-Dokument
     const [textTitle, setTextTitle] = useState("");
     const [content, setContent] = useState("");
 
-    // 👉 States für Datei-Upload
     const [fileTitle, setFileTitle] = useState("");
     const [file, setFile] = useState(null);
 
-    useEffect(() => {
+    // Dokumente laden
+    const loadDocuments = () => {
         fetch("http://localhost:8081/api/document")
             .then((res) => res.json())
-            .then((data) => setDocuments(data));
+            .then((data) => setDocuments(data))
+            .catch((err) => console.error("Fehler beim Laden:", err));
+    };
+
+    useEffect(() => {
+        loadDocuments();
     }, []);
 
-    // Neues Text-Dokument hinzufügen
+    // Text-Dokument hinzufügen
     const addDocument = async () => {
         await fetch("http://localhost:8081/api/document", {
             method: "POST",
@@ -26,7 +31,7 @@ function App() {
         });
         setTextTitle("");
         setContent("");
-        window.location.reload();
+        loadDocuments();
     };
 
     // Datei hochladen
@@ -42,55 +47,84 @@ function App() {
             });
             setFileTitle("");
             setFile(null);
-            window.location.reload();
+            loadDocuments();
         };
         reader.readAsDataURL(file);
     };
 
-    return (
-        <div style={{ padding: "20px", fontFamily: "Arial" }}>
-            <h1>📂 Document Dashboard</h1>
+    // Dokument löschen
+    const deleteDocument = async (id) => {
+        await fetch(`http://localhost:8081/api/document/${id}`, {
+            method: "DELETE",
+        });
+        loadDocuments();
+    };
 
-            {/* Text-Dokument */}
-            <div style={{ marginBottom: "20px", padding: "10px", border: "1px solid #ccc" }}>
-                <h3>📝 Neues Text-Dokument hinzufügen</h3>
-                <input
-                    placeholder="Titel"
-                    value={textTitle}
-                    onChange={(e) => setTextTitle(e.target.value)}
-                />
-                <input
-                    placeholder="Content"
-                    value={content}
-                    onChange={(e) => setContent(e.target.value)}
-                />
-                <button onClick={addDocument}>➕ Hinzufügen</button>
+    return (
+        <div className="app-container">
+            <h1 className="dashboard-title">Document Dashboard</h1>
+
+            {/* Neues Text-Dokument */}
+            <div className="upload-card">
+                <h2>Neues Text-Dokument</h2>
+                <div className="form-group">
+                    <input
+                        className="input-field"
+                        placeholder="Titel"
+                        value={textTitle}
+                        onChange={(e) => setTextTitle(e.target.value)}
+                    />
+                    <input
+                        className="input-field"
+                        placeholder="Inhalt"
+                        value={content}
+                        onChange={(e) => setContent(e.target.value)}
+                    />
+                    <button className="btn btn-primary" onClick={addDocument}>
+                        Hinzufügen
+                    </button>
+                </div>
             </div>
 
             {/* Datei Upload */}
-            <div style={{ marginBottom: "20px", padding: "10px", border: "1px solid #ccc", background: "#eef" }}>
-                <h3>📤 Datei hochladen</h3>
-                <input
-                    placeholder="Titel"
-                    value={fileTitle}
-                    onChange={(e) => setFileTitle(e.target.value)}
-                />
-                <input
-                    type="file"
-                    onChange={(e) => setFile(e.target.files[0])}
-                />
-                <button onClick={uploadFile}>📎 Upload</button>
+            <div className="upload-card">
+                <h2>Datei hochladen</h2>
+                <div className="form-group">
+                    <input
+                        className="input-field"
+                        placeholder="Titel"
+                        value={fileTitle}
+                        onChange={(e) => setFileTitle(e.target.value)}
+                    />
+                    <input
+                        className="file-input"
+                        type="file"
+                        onChange={(e) => setFile(e.target.files[0])}
+                    />
+                    <button className="btn btn-primary" onClick={uploadFile}>
+                        Upload
+                    </button>
+                </div>
             </div>
 
-            {/* Dokumente anzeigen */}
-            <h3>📑 Gespeicherte Dokumente</h3>
-            <ul>
+            {/* Gespeicherte Dokumente */}
+            <h2 className="docs-title">Gespeicherte Dokumente</h2>
+            <div className="docs-grid">
                 {documents.map((doc) => (
-                    <li key={doc.id}>
-                        <b>{doc.title}</b>: {doc.content}
-                    </li>
+                    <div className="doc-card" key={doc.id}>
+                        <h3>{doc.title}</h3>
+                        <p className="doc-id">ID: {doc.id}</p>
+                        <p className="doc-content">
+                            {doc.content?.startsWith("data:application/pdf")
+                                ? "PDF-Datei gespeichert"
+                                : doc.content?.substring(0, 100) + "..."}
+                        </p>
+                        <button className="btn btn-danger" onClick={() => deleteDocument(doc.id)}>
+                            Löschen
+                        </button>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }

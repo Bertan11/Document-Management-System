@@ -7,14 +7,21 @@ namespace DocumentManagementSystem.Services
     {
         private readonly ConnectionFactory _factory;
 
+        // Standard-Konstruktor für echten Betrieb
         public RabbitMqService()
         {
             _factory = new ConnectionFactory()
             {
-                HostName = "rabbitmq", // aus docker-compose
+                HostName = "rabbitmq",
                 UserName = "guest",
                 Password = "guest"
             };
+        }
+
+        // Test-Konstruktor → erlaubt Dependency Injection
+        public RabbitMqService(ConnectionFactory factory)
+        {
+            _factory = factory;
         }
 
         public void SendMessage(string message)
@@ -22,22 +29,9 @@ namespace DocumentManagementSystem.Services
             using (var connection = _factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(
-                    queue: "documents",
-                    durable: false,
-                    exclusive: false,
-                    autoDelete: false,
-                    arguments: null
-                );
-
+                channel.QueueDeclare("documents", false, false, false, null);
                 var body = Encoding.UTF8.GetBytes(message);
-
-                channel.BasicPublish(
-                    exchange: "",
-                    routingKey: "documents",
-                    basicProperties: null,
-                    body: body
-                );
+                channel.BasicPublish("", "documents", null, body);
             }
         }
     }
