@@ -1,66 +1,76 @@
 ﻿using DocumentManagementSystem.Data;
-   // 👈 für ErrorHandlingMiddleware
 using DocumentManagementSystem.Middlewares;
 using DocumentManagementSystem.Repositories;
-using DocumentManagementSystem.Services;
+using DocumentManagementSystem.Services; // <- IEventBus, RabbitMqService
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 🔹 DbContext mit Connection String aus appsettings.json oder Docker-Umgebung
+// DB
 builder.Services.AddDbContext<DocumentDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 🔹 Repository + Service registrieren
+// Repos/Services
 builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
 builder.Services.AddScoped<IDocumentService, DocumentService>();
 
-// 🔹 RabbitMQ-Service
-builder.Services.AddSingleton<RabbitMqService>();
+// RabbitMQ Publisher über DI (nicht die konkrete Klasse in Controllers/Services nutzen)
+builder.Services.AddSingleton<IEventBus, RabbitMqService>();
 
-// 🔹 CORS hinzufügen
+//API
+builder.Services.AddSingleton<IObjectStorage, MinioStorage>();
+
+// CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:3000") // React-Frontend
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
 
-// 🔹 Swagger
+// MVC/Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
 var app = builder.Build();
 
-// 🔹 Migrationen automatisch ausführen
+// DB-Migrationen beim Start
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<DocumentDbContext>();
-    db.Database.Migrate();   // Erstellt die Tabellen basierend auf Migrationen
+    db.Database.Migrate();
 }
 
-// 🔹 Swagger immer aktiv
+// RabbitMQ-Infrastruktur (Exchange/Queue/Binding) beim Start sicherstellen
+using (var scope = app.Services.CreateScope())
+{
+    var cfg = scope.ServiceProvider.GetRequiredService<IConfiguration>();
+    var bus = scope.ServiceProvider.GetRequiredService<IEventBus>();
+
+    var exchange = cfg["RabbitMq:Exchange"] ?? cfg["Rabbit:Exchange"] ?? "dms.events";
+    var queue = cfg["RabbitMq:QueueUpload"] ?? cfg["Rabbit:QueueUpload"] ?? "dms.uploads";
+    var routingKey = cfg["RabbitMq:RoutingUpload"] ?? cfg["Rabbit:RoutingUpload"] ?? "document.uploaded";
+
+    bus.EnsureInfra(exchange, queue, routingKey);
+}
+
+// Swagger
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Document Management API v1");
-    c.RoutePrefix = "swagger"; // erreichbar unter /swagger
+    c.RoutePrefix = "swagger";
 });
 
-// 🔹 ErrorHandlingMiddleware einfügen (muss GANZ OBEN stehen!)
+// Middleware
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
-app.UseHttpsRedirection();
-
-// 🔹 CORS aktivieren (muss vor Authorization & Controllern stehen!)
 app.UseCors("AllowFrontend");
-
 app.UseAuthorization();
+
 app.MapControllers();
 app.Run();

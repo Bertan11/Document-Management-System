@@ -28,19 +28,19 @@ function UploadDocument() {
             });
 
             if (response.ok) {
-                setMessage("✅ Datei erfolgreich hochgeladen!");
+                setMessage(" Datei erfolgreich hochgeladen!");
             } else {
-                setMessage("❌ Fehler beim Hochladen.");
+                setMessage(" Fehler beim Hochladen.");
             }
         } catch (error) {
             console.error(error);
-            setMessage("❌ Server nicht erreichbar.");
+            setMessage(" Server nicht erreichbar.");
         }
     };
 
     return (
         <div style={{ padding: "20px" }}>
-            <h2>📤 Dokument hochladen</h2>
+            <h2> Dokument hochladen</h2>
             <form onSubmit={handleUpload}>
                 <div>
                     <input

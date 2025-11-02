@@ -1,17 +1,49 @@
-﻿services:
+﻿version: "3.9"
+
+services:
   postgres:
     image: postgres:16
+    container_name: dms-postgres
     environment:
       POSTGRES_DB: DocumentManagement
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-    ports:
-      - "5433:5432"
-    volumes:
-      - dbdata:/var/lib/postgresql/data
+    ports: ["5433:5432"]
+    volumes: [dbdata:/var/lib/postgresql/data]
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d DocumentManagement"]
       interval: 5s
+      timeout: 5s
+      retries: 5
+
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: rabbitmq
+    ports: ["5672:5672","15672:15672"]
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes: [rabbitmqdata:/var/lib/rabbitmq]
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # NEW: MinIO
+  minio:
+    image: minio/minio:latest
+    container_name: dms-minio
+    environment:
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: minio12345
+    command: server /data --console-address ":9001"
+    ports: ["9000:9000","9001:9001"]
+    volumes:
+      - miniodata:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
       timeout: 5s
       retries: 5
 
@@ -19,61 +51,65 @@
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: dms-api
     depends_on:
-      postgres:
-        condition: service_healthy
-      rabbitmq:
-        condition: service_healthy
+      postgres: { condition: service_healthy }
+      rabbitmq: { condition: service_healthy }
+      minio:    { condition: service_healthy }
     environment:
       ASPNETCORE_URLS: http://+:8081
       ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=DocumentManagement;Username=postgres;Password=postgres"
 
-      # RabbitMQ Settings
+      # RabbitMQ (API publishes)
       RabbitMq__Host: rabbitmq
       RabbitMq__User: guest
       RabbitMq__Password: guest
-    ports:
-      - "8081:8081"
+      RabbitMq__Exchange: dms.events
+      RabbitMq__QueueUpload: dms.uploads
+      RabbitMq__RoutingUpload: document.uploaded
+
+      # MinIO (API speichert PDFs)
+      Minio__Endpoint: http://minio:9000
+      Minio__AccessKey: minio
+      Minio__SecretKey: minio12345
+      Minio__Bucket: documents
+    ports: ["8081:8081"]
 
   frontend:
     build:
       context: ./frontend
-      dockerfile: Dockerfile
-    ports:
-      - "3000:80"
-    depends_on:
-      - api
+    container_name: dms-frontend
+    ports: ["3000:80"]
+    depends_on: [api]
 
-  rabbitmq:
-    image: rabbitmq:3-management
-    container_name: rabbitmq
-    ports:
-      - "5672:5672"
-      - "15672:15672"
-    environment:
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
-    healthcheck:
-      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-    volumes:
-      - rabbitmqdata:/var/lib/rabbitmq
-
-  ocrworker:   # 🚀 NEU: Worker-Service
+  ocrworker:
     build:
-      context: ../OcrWorker   # Ordner wo dein Worker liegt
+      context: ../OcrWorker
       dockerfile: Dockerfile
+    container_name: dms-ocr
     depends_on:
-      rabbitmq:
-        condition: service_healthy
+      rabbitmq: { condition: service_healthy }
+      minio:    { condition: service_healthy }
     environment:
-      RabbitMq__Host: rabbitmq
-      RabbitMq__User: guest
-      RabbitMq__Password: guest
-    restart: always   # Worker läuft immer mit
+      # Rabbit (Worker consumes)
+      Rabbit__Host: rabbitmq
+      Rabbit__User: guest
+      Rabbit__Pass: guest
+      Rabbit__Exchange: dms.events
+      Rabbit__QueueUpload: dms.uploads
+      Rabbit__RoutingUpload: document.uploaded
+      Rabbit__Prefetch: 5
+
+      # MinIO (Worker holt PDFs)
+      Minio__Endpoint: http://minio:9000
+      Minio__AccessKey: minio
+      Minio__SecretKey: minio12345
+      Minio__Bucket: documents
+
+      Processing__SimulatedLatencyMs: 50
+    restart: always
 
 volumes:
   dbdata:
   rabbitmqdata:
+  miniodata:

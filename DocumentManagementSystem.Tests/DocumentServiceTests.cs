@@ -136,5 +136,29 @@ namespace DocumentManagementSystem.Tests
             Assert.Equal("U1", result.Title);
         }
 
+        [Fact]
+        public async Task AddDocument_ReturnsSameDocument()
+        {
+            var doc = new Document { Id = Guid.NewGuid(), Title = "T1", Content = "Data" };
+            _mockRepo.Setup(r => r.AddAsync(doc)).ReturnsAsync(doc);
+
+            var result = await _service.AddAsync(doc);
+
+            Assert.Equal(doc, result);
+        }
+
+        [Fact]
+        public async Task GetById_CallsRepositoryOnce()
+        {
+            var id = Guid.NewGuid();
+            var doc = new Document { Id = id, Title = "CallTest" };
+            _mockRepo.Setup(r => r.GetByIdAsync(id)).ReturnsAsync(doc);
+
+            var result = await _service.GetByIdAsync(id);
+
+            _mockRepo.Verify(r => r.GetByIdAsync(id), Times.Once);
+            Assert.Equal("CallTest", result.Title);
+        }
+
     }
 }
