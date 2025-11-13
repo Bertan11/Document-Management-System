@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using DocumentManagementSystem.Models;
 using DocumentManagementSystem.Services; // IEventBus, IObjectStorage, UploadMessage
@@ -54,7 +55,7 @@ namespace DocumentManagementSystem.Controllers
             return Ok(document);
         }
 
-        // POST: api/document
+        // POST: api/document  (JSON)
         // Speichert in DB, lädt Content als .txt nach MinIO und published Event
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Document document)
@@ -65,17 +66,17 @@ namespace DocumentManagementSystem.Controllers
             // 1) in DB speichern
             var created = await _service.AddAsync(document);
 
-            // 2) nach MinIO hochladen
+            // 2) nach MinIO hochladen (als .txt)
             var bucket = _cfg["Minio:Bucket"] ?? "documents";
             var objectName = $"{created.Id}.txt";
             var contentType = "text/plain";
 
-            using (var ms = new MemoryStream(Encoding.UTF8.GetBytes(created.Content ?? string.Empty)))
+            await using (var ms = new MemoryStream(Encoding.UTF8.GetBytes(created.Content ?? string.Empty)))
             {
                 await _storage.UploadAsync(bucket, objectName, ms, contentType);
             }
 
-            // 3) Event veröffentlichen (mit Bucket & Object)
+            // 3) Event veröffentlichen
             var msg = new UploadMessage(created.Id, created.Title, bucket, objectName, DateTime.UtcNow);
             _eventBus.Publish(
                 _cfg["RabbitMq:Exchange"] ?? _cfg["Rabbit:Exchange"] ?? "dms.events",
@@ -102,36 +103,50 @@ namespace DocumentManagementSystem.Controllers
             return Ok(updated);
         }
 
-        // POST: api/document/upload (Alternative Route, gleiche Logik)
+        // POST: api/document/upload  (MULTIPART)
+        // Nimmt title + file an, speichert Datei 1:1 in MinIO (z.B. PDF), published Event
         [HttpPost("upload")]
-        public async Task<IActionResult> Upload([FromBody] Document document)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> Upload([FromForm] string title, [FromForm] IFormFile file, CancellationToken ct)
         {
-            if (document == null || string.IsNullOrEmpty(document.Content))
-                throw new DocumentValidationException("Ungültige Datei oder leerer Inhalt.");
+            if (string.IsNullOrWhiteSpace(title))
+                throw new DocumentValidationException("Titel darf nicht leer sein.");
+            if (file == null || file.Length == 0)
+                throw new DocumentValidationException("Keine Datei übergeben.");
 
-            document.Id = Guid.NewGuid();
-            document.CreatedAt = DateTime.UtcNow;
-
-            var saved = await _service.AddAsync(document);
-
-            var bucket = _cfg["Minio:Bucket"] ?? "documents";
-            var objectName = $"{saved.Id}.txt";
-            var contentType = "text/plain";
-
-            using (var ms = new MemoryStream(Encoding.UTF8.GetBytes(saved.Content ?? string.Empty)))
+            // 1) Metadaten in DB (Content optional leer)
+            var doc = new Document
             {
-                await _storage.UploadAsync(bucket, objectName, ms, contentType);
+                Id = Guid.NewGuid(),
+                Title = title,
+                Content = null,
+                CreatedAt = DateTime.UtcNow
+            };
+            var saved = await _service.AddAsync(doc);
+
+            // 2) Datei nach MinIO laden (Id + Originalextension)
+            var bucket = _cfg["Minio:Bucket"] ?? "documents";
+            var ext = Path.GetExtension(file.FileName);
+            var objectName = string.IsNullOrWhiteSpace(ext)
+                ? $"{saved.Id}"
+                : $"{saved.Id}{ext}";
+            var contentType = string.IsNullOrWhiteSpace(file.ContentType) ? "application/octet-stream" : file.ContentType;
+
+            await using (var stream = file.OpenReadStream())
+            {
+                await _storage.UploadAsync(bucket, objectName, stream, contentType, ct);
             }
 
-            var msg = new UploadMessage(saved.Id, saved.Title, bucket, objectName, DateTime.UtcNow);
+            // 3) Event für den OCR-Worker
+            var msg = new UploadMessage(saved.Id, file.FileName, bucket, objectName, DateTime.UtcNow);
             _eventBus.Publish(
                 _cfg["RabbitMq:Exchange"] ?? _cfg["Rabbit:Exchange"] ?? "dms.events",
                 _cfg["RabbitMq:RoutingUpload"] ?? _cfg["Rabbit:RoutingUpload"] ?? "document.uploaded",
                 msg
             );
 
-            _logger.LogInformation("Upload für {DocId} nach MinIO gespeichert und Event veröffentlicht.", saved.Id);
-            return Ok(saved);
+            _logger.LogInformation("Upload {DocId} ({File}) nach MinIO gespeichert und Event veröffentlicht.", saved.Id, file.FileName);
+            return Ok(new { saved.Id, saved.Title, Bucket = bucket, ObjectName = objectName });
         }
 
         // DELETE: api/document/{id}
@@ -145,6 +160,7 @@ namespace DocumentManagementSystem.Controllers
             _logger.LogInformation("Dokument {Id} gelöscht.", id);
             return NoContent();
         }
+
         // GET: api/document/{id}/ocr
         [HttpGet("{id}/ocr")]
         public async Task<IActionResult> GetOcr(Guid id, CancellationToken ct)

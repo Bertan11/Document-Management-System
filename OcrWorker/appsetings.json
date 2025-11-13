@@ -1,0 +1,21 @@
+﻿{
+    "RabbitMq": {
+        "HostName": "localhost",
+        "Port": 5672,
+        "UserName": "guest",
+        "Password": "guest",
+        "Exchange": "dms.events",
+        "QueueUpload": "dms.uploads",
+        "RoutingUpload": "document.uploaded"
+    },
+    "Minio": {
+        "Endpoint": "http://localhost:9000",
+        "AccessKey": "minio",
+        "SecretKey": "minio12345",
+        "Bucket": "documents"
+    },
+    "Ocr": {
+        "TessdataPath": "tessdata",
+        "Language": "eng"
+    }
+}

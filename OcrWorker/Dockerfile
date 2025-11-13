@@ -1,17 +1,25 @@
-# Build-Phase
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-
-# Kopiere nur die csproj-Datei und restore Dependencies
-COPY *.csproj ./
-RUN dotnet restore
-
-# Kopiere den Rest und baue
 COPY . .
-RUN dotnet publish -c Release -o /app
+RUN dotnet restore
+RUN dotnet publish -c Release -o /out /p:UseAppHost=false
 
-# Runtime-Phase
-FROM mcr.microsoft.com/dotnet/runtime:8.0 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        tesseract-ocr \
+        tesseract-ocr-eng \
+        tesseract-ocr-deu \
+        poppler-utils && \
+    rm -rf /var/lib/apt/lists/*
+
 WORKDIR /app
-COPY --from=build /app .
+COPY --from=build /out ./
+
+
+ENV OCR__Lang="eng+deu" \
+    DOTNET_EnableDiagnostics=0
+
 ENTRYPOINT ["dotnet", "OcrWorker.dll"]

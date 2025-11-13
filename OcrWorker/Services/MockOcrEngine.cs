@@ -1,24 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 
-namespace OcrWorker.Services;
-
-public sealed class MockOcrEngine : IOcrEngine   // <- WICHTIG: Interface implementieren
+namespace OcrWorker.Services
 {
-    private readonly int _latencyMs;
-
-    public MockOcrEngine(IConfiguration cfg)
+    public sealed class MockOcrEngine : IOcrEngine
     {
-        _latencyMs = cfg.GetValue<int?>("Processing:SimulatedLatencyMs") ?? 50;
-    }
+        public async Task<string> ExtractTextAsync(Stream input, string contentType, CancellationToken ct)
+        {
+            // Nur zum Testen: Inhalt als Text zurückgeben (oder Länge, falls binär)
+            using var ms = new MemoryStream();
+            await input.CopyToAsync(ms, ct);
+            var bytes = ms.ToArray();
 
-    public async Task<string> ExtractTextAsync(Guid documentId, CancellationToken ct = default) // <- Signatur wie im Interface
-    {
-        await Task.Delay(_latencyMs, ct);
-        return $"[Simuliertes OCR-Ergebnis für DocumentId={documentId}]";
+            // Wenn es nach Text aussieht, als UTF-8 interpretieren, sonst Dummy
+            try
+            {
+                var text = Encoding.UTF8.GetString(bytes);
+                // Kleine Heuristik: wenn viele � drin sind, nimm Dummy
+                if (text.Split('�').Length > bytes.Length / 16 + 1)
+                    return $"[MOCK OCR] contentType={contentType}; length={bytes.Length}";
+                return $"[MOCK OCR] contentType={contentType}\n{text}";
+            }
+            catch
+            {
+                return $"[MOCK OCR] contentType={contentType}; length={bytes.Length}";
+            }
+        }
     }
 }

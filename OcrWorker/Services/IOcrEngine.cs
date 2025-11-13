@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿// Services/IOcrEngine.cs
+using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace OcrWorker.Services;
-
-public interface IOcrEngine
+namespace OcrWorker.Services
 {
-    Task<string> ExtractTextAsync(Guid documentId, CancellationToken ct = default);
+    public interface IOcrEngine
+    {
+        Task<string> ExtractTextAsync(Stream input, string contentType, CancellationToken ct);
+    }
 }
