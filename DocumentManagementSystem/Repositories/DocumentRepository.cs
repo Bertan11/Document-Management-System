@@ -27,14 +27,14 @@ namespace DocumentManagementSystem.Repositories
         {
             _context.Documents.Add(document);
             await _context.SaveChangesAsync();
-            return document; // Rückgabe des gespeicherten Objekts
+            return document; 
         }
 
         public async Task<Document> UpdateAsync(Document document)
         {
             _context.Documents.Update(document);
             await _context.SaveChangesAsync();
-            return document; // Rückgabe des aktualisierten Objekts
+            return document; 
         }
 
         public async Task<bool> DeleteAsync(Guid id)
@@ -45,7 +45,7 @@ namespace DocumentManagementSystem.Repositories
 
             _context.Documents.Remove(doc);
             await _context.SaveChangesAsync();
-            return true; // Rückgabe ob das Löschen erfolgreich war
+            return true; 
         }
     }
 }

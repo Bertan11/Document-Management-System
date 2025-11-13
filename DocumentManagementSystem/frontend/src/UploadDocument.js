@@ -1,63 +1,66 @@
 ﻿import React, { useState } from "react";
 
-function UploadDocument() {
+export default function UploadDocument() {
     const [title, setTitle] = useState("");
     const [file, setFile] = useState(null);
-    const [message, setMessage] = useState("");
-
-    const handleFileChange = (e) => {
-        setFile(e.target.files[0]);
-    };
+    const [msg, setMsg] = useState("");
 
     const handleUpload = async (e) => {
-        e.preventDefault();
+        e.preventDefault();                // verhindert Seiten-Reload
 
-        if (!file || !title) {
-            setMessage("Bitte Titel und Datei auswählen!");
+        if (!title || !file) {
+            setMsg("Bitte Titel und Datei auswählen.");
             return;
         }
 
         const formData = new FormData();
-        formData.append("title", title);
+        formData.append("title", title);   // Namen müssen zum Backend passen
         formData.append("file", file);
 
         try {
-            const response = await fetch("http://localhost:8081/api/document/upload", {
+            const res = await fetch("/api/document/upload", {
                 method: "POST",
-                body: formData,
+                body: formData,                // KEINE Content-Type Header setzen!
             });
 
-            if (response.ok) {
-                setMessage("✅ Datei erfolgreich hochgeladen!");
+            if (res.ok) {
+                setMsg("Upload erfolgreich.");
+                setTitle("");
+                setFile(null);
             } else {
-                setMessage("❌ Fehler beim Hochladen.");
+                const text = await res.text();
+                setMsg(`Upload fehlgeschlagen (${res.status}): ${text}`);
             }
-        } catch (error) {
-            console.error(error);
-            setMessage("❌ Server nicht erreichbar.");
+        } catch (err) {
+            console.error(err);
+            setMsg("Server nicht erreichbar.");
         }
     };
 
     return (
-        <div style={{ padding: "20px" }}>
-            <h2>📤 Dokument hochladen</h2>
-            <form onSubmit={handleUpload}>
-                <div>
-                    <input
-                        type="text"
-                        placeholder="Dokumenttitel"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <input type="file" onChange={handleFileChange} />
-                </div>
-                <button type="submit">Hochladen</button>
+        <div style={{ padding: 16 }}>
+            <h3>Datei hochladen</h3>
+
+            {/* WICHTIG: form + onSubmit + type="submit" */}
+            <form onSubmit={handleUpload} encType="multipart/form-data">
+                <input
+                    type="text"
+                    name="title"
+                    placeholder="Titel"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    style={{ width: "60%", marginRight: 12 }}
+                />
+                <input
+                    type="file"
+                    name="file"
+                    onChange={(e) => setFile(e.target.files?.[0] ?? null)}
+                    style={{ marginRight: 12 }}
+                />
+                <button type="submit">Upload</button>
             </form>
-            {message && <p>{message}</p>}
+
+            {msg && <p style={{ marginTop: 8 }}>{msg}</p>}
         </div>
     );
 }
-
-export default UploadDocument;

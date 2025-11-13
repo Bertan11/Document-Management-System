@@ -1,46 +1,34 @@
-﻿using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
-using System.Text;
+﻿// OcrWorker/Program.cs
+using System.IO;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using OcrWorker.Services;
+using OcrWorker.Workers;
 
-Console.WriteLine("📥 OCR Worker gestartet. Warte auf Nachrichten...");
+var builder = Host.CreateApplicationBuilder(args);
 
-var factory = new ConnectionFactory()
+builder.Configuration
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+    .AddEnvironmentVariables();
+
+builder.Services.AddLogging(logging =>
 {
-    HostName = "rabbitmq",
-    UserName = "guest",
-    Password = "guest"
-};
+    logging.ClearProviders();
+    logging.AddConsole();
+});
 
-using var connection = factory.CreateConnection();
-using var channel = connection.CreateModel();
+// MinIO Storage
+builder.Services.AddSingleton<IObjectStorage, MinioStorage>();
 
-channel.QueueDeclare(
-    queue: "documents",
-    durable: false,
-    exclusive: false,
-    autoDelete: false,
-    arguments: null
-);
+// OCR Service
+builder.Services.AddSingleton<OcrService>();
 
-var consumer = new EventingBasicConsumer(channel);
+// Worker
+builder.Services.AddHostedService<UploadOcrWorker>();
 
-consumer.Received += (model, ea) =>
-{
-    var body = ea.Body.ToArray();
-    var message = Encoding.UTF8.GetString(body);
-    Console.WriteLine($"👉 Nachricht erhalten: {message}");
-
-    // Fake-OCR Simulation
-    Console.WriteLine($"⚡ Fake OCR Ergebnis: {message.ToUpper()}");
-};
-
-channel.BasicConsume(
-    queue: "documents",
-    autoAck: true,
-    consumer: consumer
-);
-
-Console.WriteLine("⚡ Worker läuft. Beende mit STRG+C.");
-
-// Worker dauerhaft laufen lassen
-await Task.Delay(-1);
+var host = builder.Build();
+await host.RunAsync();

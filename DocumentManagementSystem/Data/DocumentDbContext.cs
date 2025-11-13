@@ -20,7 +20,7 @@ namespace DocumentManagementSystem.Data
             {
                 entity.HasKey(e => e.Id);
 
-                // Guid wird in der App gesetzt, nicht von der DB generiert
+
                 entity.Property(e => e.Id)
                       .ValueGeneratedNever();
 

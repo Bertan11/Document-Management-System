@@ -15,7 +15,7 @@ namespace DocumentManagementSystem.Middlewares
             _logger = logger;
         }
 
-        public async Task InvokeAsync(HttpContext context)   // 👈 wichtig
+        public async Task InvokeAsync(HttpContext context)   
         {
             try
             {
@@ -23,7 +23,7 @@ namespace DocumentManagementSystem.Middlewares
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "❌ Fehler aufgetreten bei Request {Path}", context.Request.Path);
+                _logger.LogError(ex, " Fehler aufgetreten bei Request {Path}", context.Request.Path);
                 await HandleExceptionAsync(context, ex);
             }
         }
